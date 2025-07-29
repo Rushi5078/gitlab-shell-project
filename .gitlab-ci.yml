@@ -1,0 +1,12 @@
+stages:
+  - execute
+
+run-shell-script:
+  stage: execute
+  script:
+    - bash ./basic.sh
+  artifacts:
+    paths:
+      - output.txt
+    when: always
+    expire_in: 1 day
